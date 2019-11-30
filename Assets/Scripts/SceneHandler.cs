@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneHandler : MonoBehaviour
 {
-  public void setScene(string sceneName){
-    SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+  public int sceneId;
+
+  public void setScene(){
+    Debug.Log("INSIDE SET SCENE: " + this.sceneId);
+    SceneManager.LoadScene(this.sceneId);
   }
 }
