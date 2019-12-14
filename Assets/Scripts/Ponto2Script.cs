@@ -11,9 +11,9 @@ public class Ponto2Script : MonoBehaviour
   bool enable;
   GameObject itenToHide;
   public Button b1;
-  public string SITE = "07";
-  public string WALL1 = "02_WALL_25cm";
-  //public string WALL2 = "02_WALL_parede cortina";
+  private string SITE = "07_";
+  private string WALL1 = "02_WALL_25cm";
+  // public string WALL2 = "02_WALL_parede cortina";
 
   void Start()
   {
@@ -40,7 +40,7 @@ public class Ponto2Script : MonoBehaviour
   }
 
   public void getObjects(){
-    GameObject casaDeBaile = GameObject.Find("CasaDeBaile");
+    GameObject casaDeBaile = GameObject.Find("CasaDeBaileOBJTxt");
     Transform[] children = casaDeBaile.GetComponentsInChildren<Transform>(true);
     foreach (Transform item in children) {
       GameObject go = item.gameObject;

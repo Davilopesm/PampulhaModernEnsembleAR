@@ -10,8 +10,8 @@ public class Ponto1Script : MonoBehaviour
   bool enable;
   GameObject itenToHide;
   public Button b1;
-  public string SITE = "07";
-  public string PIL = "01";
+  private string SITE = "07_";
+  private string PIL = "01_";
 
   void Start()
   {
@@ -38,14 +38,15 @@ public class Ponto1Script : MonoBehaviour
   }
 
   public void getObjects(){
-    GameObject casaDeBaile = GameObject.Find("CasaDeBaile");
+    GameObject casaDeBaile = GameObject.Find("CasaDeBaileOBJTxt");
     Transform[] children = casaDeBaile.GetComponentsInChildren<Transform>(true);
     foreach (Transform item in children) {
       GameObject go = item.gameObject;
- 
+
       if(!go.name.Contains(this.SITE) && !go.name.Contains(this.PIL) && !go.name.Contains(casaDeBaile.name)){
         go.gameObject.SetActive(this.enable);
-      }
+      } 
+      // 03_WINDOW_VIDRO[617016]
     }
 
   /*  GameObject[] allObjects = FindObjectsOfType<GameObject>();

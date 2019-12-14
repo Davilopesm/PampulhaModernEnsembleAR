@@ -9,7 +9,7 @@ public class SceneHandler : MonoBehaviour
 
   private void Update() {
     if (Input.GetKey(KeyCode.Escape)){
-      SceneManager.LoadScene(this.sceneId);
+      SceneManager.LoadScene(0);
     }
   }
 

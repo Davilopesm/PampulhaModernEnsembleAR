@@ -11,9 +11,10 @@ public class Ponto3Script : MonoBehaviour
   bool enable;
   GameObject itenToHide;
   public Button b1;
-  public string SITE = "07";
-  public string WINDOW = "03_WINDOW"; 
-  public string WALL = "02_WALL_brise";
+  private string SITE = "07_";
+  private string WINDOW = "03_WINDOW"; 
+  private string WALL = "02_WALL_brise";
+  private string MULLION = "mullion";
 
   void Start()
   {
@@ -40,12 +41,17 @@ public class Ponto3Script : MonoBehaviour
   }
 
   public void getObjects(){
-    GameObject casaDeBaile = GameObject.Find("CasaDeBaile");
+    GameObject casaDeBaile = GameObject.Find("CasaDeBaileOBJTxt");
     Transform[] children = casaDeBaile.GetComponentsInChildren<Transform>(true);
     foreach (Transform item in children) {
       GameObject go = item.gameObject;
  
-      if(!go.name.Contains(this.SITE) && !go.name.Contains(this.WINDOW) && !go.name.Contains(this.WALL) && !go.name.Contains(casaDeBaile.name)){
+      if(!go.name.Contains(this.SITE) 
+      && !go.name.Contains(this.WINDOW) 
+      && !go.name.Contains(this.WALL) 
+      && !go.name.Contains(casaDeBaile.name)
+      && !go.name.Contains(this.MULLION)
+      ){
         go.gameObject.SetActive(this.enable);
       }
     }
