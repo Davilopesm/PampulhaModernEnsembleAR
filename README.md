@@ -8,5 +8,5 @@ Using pre-created digital twins from buildings it allows the user to experience 
 #### This APP contains:
   - Explanation of the importance of Pampulhas Modern Ensemble
   - A simple explanation of each building
-  - Buildings visualization in AR
+  - Buildings visualization/interactions in AR
   - A first-person view/interaction of/with the buildings
