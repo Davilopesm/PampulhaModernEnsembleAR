@@ -9,13 +9,20 @@ public class SceneHandler : MonoBehaviour
 
   private void Update() {
     if (Input.GetKey(KeyCode.Escape)){
+      Screen.orientation = ScreenOrientation.Portrait;
+      Screen.autorotateToPortrait = true;
+      Screen.autorotateToPortraitUpsideDown = true;
       SceneManager.LoadScene(0);
     }
   }
 
   public void setScene(){
     Debug.Log("INSIDE SET SCENE: " + this.sceneId);
-    SceneManager.LoadScene(this.sceneId);
-    
+    if ( this.sceneId == 2) {
+      Screen.orientation = ScreenOrientation.LandscapeLeft;
+      Screen.autorotateToPortrait = false;
+      Screen.autorotateToPortraitUpsideDown = false;
+    }
+    SceneManager.LoadScene(this.sceneId); 
   }
 }

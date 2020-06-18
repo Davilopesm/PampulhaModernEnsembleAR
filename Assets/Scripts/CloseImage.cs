@@ -17,8 +17,10 @@ public class CloseImage : MonoBehaviour
 
 	void HandleFingerTap(Lean.Touch.LeanFinger finger)
 	{
-		Debug.Log("You just tapped the screen with finger " + finger.Index + " at " + finger.ScreenPosition);
     image.SetActive(false);
+    Screen.orientation = ScreenOrientation.LandscapeLeft;
+    Screen.autorotateToPortrait = false;
+    Screen.autorotateToPortraitUpsideDown = false;
 	}
 
   private void Start() 
